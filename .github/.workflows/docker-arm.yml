@@ -23,8 +23,8 @@ jobs:
       - name: Build & push ARM64 image
         run: |
           docker buildx build \
-            --platform linux/arm64 \
-            -t ghcr.io/${{ github.repository }}:latest \
+            --platform linux/amd64,linux/arm64 \
+            -t ghcr.io/${{ github.actor }}/trashlight:latest \
             --push .
 
       - name: Trigger Portainer Stack Webhook
