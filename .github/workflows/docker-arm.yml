@@ -26,7 +26,3 @@ jobs:
             --platform linux/amd64,linux/arm64 \
             -t ghcr.io/${{ github.actor }}/trashlight:latest \
             --push .
-
-      - name: Trigger Portainer Stack Webhook
-        run: |
-          curl -X POST ${{ secrets.PORTAINER_WEBHOOK }}
