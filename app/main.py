@@ -1,7 +1,16 @@
-# app/main.py
+import logging
 import time
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+
+logger = logging.getLogger("trashlight")
+
+logger.info("Trashlight service started")
 
 while True:
-    print("Hello from Raspberry Pi Docker 🥧")
+    logger.info("Hello World from Trashlight 🚀")
     time.sleep(10)
-# This script prints a message every 10 seconds
