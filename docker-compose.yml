@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  trashlight:
+    image: ghcr.io/prieffel1/trashlight:latest
+    container_name: trashlight
+    restart: always
+
+    environment:
+      - TZ=Europe/Berlin
+
+    volumes:
+      - app-data:/app/data
+
+volumes:
+  app-data:
